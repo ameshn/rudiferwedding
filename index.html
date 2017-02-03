@@ -2,394 +2,107 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Amesh and Jessica</title>
-	<meta name="author" content="Amesh Narsing" />
-	<meta name="description" content="Join us for the wedding of Amesh and Jessica." />
-	<meta name="keywords"  content="amesh,jessica,symes,narsing,wedding,rsvp" />
-	<meta name="Resource-type" content="Document" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Rudi and Jen's Wedding</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
 
- 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=IM+Fell+English" />
-	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <style>
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/ameshandjess.css" />
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+        font-size: 5em;
+        font-family: arial,helvetica;
+        color: #fff;
+        margin:0;
+    }
+    .intro p{
+        color: #fff;
+    }
 
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+    }
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu li a {
+        color: #fff;
+    }
+    </style>
 
-	  ga('create', 'UA-65845524-1', 'auto');
-	  ga('send', 'pageview');
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
 
-	</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['white', 'white', 'white', 'black', 'rgb(60, 19, 34)', 'white'],
-				anchors: ['home', 'venue', 'rsvp', 'party', 'accomodation', 'gifts'],
-				menu: '#menu',
-				scrollingSpeed: 1000
-			});
+    <script type="text/javascript" src="vendors/scrolloverflow.js"></script>
 
-			$('.grid').masonry({
-			  	// options
-			  	itemSelector: '.grid-item',
-			  	isFitWidth: true
-			});
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
 
-			// RSVP init
-			$('#RSVPifyIFrame').css('height', $(window).height()+'px');
-			$('.iframe-container').css('height', $(window).height()+'px');
-
-	    	// Init Accomodation list.
-			hideAllAcc();
-			$("#acc-duncan").show();
-
-			$("#acc-button-duncan").click({group: $("#acc-duncan")}, showAcc);
-
-			$("#acc-button-cowichan").click({group: $("#acc-cowichan")}, showAcc);
-
-			$("#acc-button-airbnb").click({group: $("#acc-airbnb")}, showAcc);
-
-			
-			// Helper functions
-
-			function hideAllAcc()
-			{
-				$("#acc-duncan").hide();
-			    $("#acc-cowichan").hide();
-			    $("#acc-airbnb").hide();
-			}
-
-			function showAcc(e)
-			{
-				$( "#acc-menu" ).find( "li" ).removeClass("active");
-				$(this).addClass("active");
-
-				e.preventDefault();
-
-				hideAllAcc();
-
-			    $(e.data.group).fadeIn();
-			}
-
-		});
-	</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                menu: '#menu',
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#7E8F7C'],
+                autoScrolling: false
+            });
+        });
+    </script>
 
 </head>
 <body>
 
+
+
 <ul id="menu">
-	<li data-menuanchor="home" class="active"><a href="#home">Amesh and Jessica</a></li>
-	<li data-menuanchor="venue"><a href="#venue">Venue</a></li>
-	<li data-menuanchor="rsvp"><a href="#rsvp">RSVP</a></li>
-	<li data-menuanchor="party"><a href="#party">Wedding Party</a></li>
-	<li data-menuanchor="accomodation"><a href="#accomodation">Accomodation</a></li>
-	<li data-menuanchor="gifts"><a href="#gifts">Gift Registry</a></li>
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Rudi and Jen</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Location</a></li>
+    <li data-menuanchor="thirdPage"><a href="#thirdPage">Accommodation</a></li>
+    <li data-menuanchor="fourthPage"><a href="#fourthPage">Gift Registry</a></li>
 </ul>
 
-
 <div id="fullpage">
-	<div class="section" id="section1">
-    	<h1>Amesh and Jessica</h1>
-		<br />
+    <div class="section " id="section0">
+        <div class="intro">
+            <img src="imgs/1.png"  alt="1"/>
+            <h1>Rudi and Jen</h1>
+            <p>Saturday, June 24 2017, 3:30pm at Beacon Hill Park</p>
+        </div>
     </div>
-	<div class="section" id="section2">
-    	<div class="venue intro">
-    		<div class="venue-grid">
-	    		<div class="venue-grid-unit">
-	    		<div class="venue-info"> 
-	    			<h2>March 26, 2016</h2>
-	    			<p>Ceremony at 3:00pm, Reception to follow</p>
-	    			<br/>
-	    			<h3>Birds Eye Cove</h3>
-	    			<p>5881 Genoa Bay Rd,</p>
-	    			<p>Duncan, B.C.</p>
-	    		</div>
-	    		</div>
-	    		<div class="grid-unit">
-	    		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.7254773076966!2d-123.597736!3d48.787130999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f4535f6c9d0db%3A0xf5f7167af9bcb454!2sBirds+Eye+Cove+Farm!5e0!3m2!1sen!2sca!4v1434857503146" width="400" height="450" frameborder="0" style="border:0"></iframe>
-	    		</div>
-	    	</div>
-    	</div>
+    <div class="section" id="section1">
+        <div class="intro">
+            <h1>Maps</h1>
+            <p>All that jazz</p>
+        </div>
+
+    </div>
+    <div class="section" id="section2">
+        <div class="intro">
+            <h1>Hotel Info</h1>
+            <p>and car rental</p>
+        </div>
     </div>
     <div class="section" id="section3">
-    	<div class="rsvp intro">
-    		<p> Please RSVP by December 15, 2015 </p>
-    		<a class="btn" href="http://ameshandjessica.rsvpify.com">Click Here to RSVP</a>
-    		
-    	</div>
-    </div>
-    <div class="section" id="section4">
-    	<div class="slide">
-			<div class="party">
-	    		<h1>Wedding Party</h1>
-	    		<div class="party-group clearfix">
-		    		<div class="party-item">
-		    			<div class="party-image sanober"></div>
-		    			<div class="party-name">Sanober Nair</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image cindy"></div>
-		    			<div class="party-name">Cynthia Ferguson</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image haley"></div>
-		    			<div class="party-name">Haley Engel</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image sarena"></div>
-		    			<div class="party-name">Sarena Narsing</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image laurel"></div>
-		    			<div class="party-name">Laurel Temmel</div>
-		    		</div>
-		    	</div>
-	    		<div class="party-group clearfix">
-		    		<div class="party-item">
-		    			<div class="party-image pravin"></div>
-		    			<div class="party-name">Pravin Narsing</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image danny"></div>
-		    			<div class="party-name">Danny Garrett-Rempel</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image dave"></div>
-		    			<div class="party-name">David Irons</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image nate"></div>
-		    			<div class="party-name">Nathan Petrowitz</div>
-		    		</div>
-		    		<div class="party-item">
-		    			<div class="party-image michael"></div>
-		    			<div class="party-name">Michael Elliott</div>
-		    		</div>
-		    	</div>
-	    	</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large sanober"></div></div>
-				<div class="party-desc">
-					<h1>Sanober Nair</h1>
-					<h2>Maid of Honour</h2>
-					<p>Sanober has been my heterosexual life partner since we were forced to live together back in 2005 when we were both rejected from UVic housing. Bonding over pop-punk and perogies, we ended up being able to live together for 6 years...and I only threw pizza at her once! Our friendship has brought us through university, kareoke bars, and different cities, but she’ll be standing beside me like she has been for the last 10 years.</p>
-				</div>
-			</div>
-		</div>
-    	<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large cindy"></div></div>
-				<div class="party-desc">
-					<h1>Cynthia Ferguson</h1>
-					<h2>Bridesmaid</h2>
-					<p>Cindy is my aunt, my sister, my best friend. From dying my hair red-orange and teaching me how to dance to “Gettin Jiggy With It”, to life lessons about why it’s important to wear deodorant, I am where I am today (and on my wedding day) because of the light encouragement she gave Amesh to finally ask me to marry him. She will stand beside me on one of the most important days of my life, because I don’t remember a day when she hasn’t been beside me. </p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large haley"></div></div>
-				<div class="party-desc">
-					<h1>Haley Engel</h1>
-					<h2>Bridesmaid</h2>
-					<p>The year was 1993, and my wild imagination could have been the end of our friendship. It was the year that Haley found out that ponies did not, in fact, come visit me at night when everyone was asleep like I had told her, the catalyst of what was probably our biggest fight. I don’t have many people that I’ve stayed friends with after high school, let alone as far back as elementary school, but Haley is my oldest friend and the family I got to choose. </p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large sarena"></div></div>
-				<div class="party-desc">
-					<h1>Sarena Narsing</h1>
-					<h2>Bridesmaid</h2>
-					<p>When Amesh invited me over to his house in Williams Lake to play Rock Band, I don’t think Sarena or I expected to be family one day. Sarena and I have enjoyed many cups of coffee, girl’s nights, dancing, teaching Amesh about the great outdoors, and confiding in each other. She’s taught me a lot about becoming a part of someone’s family, and I am so happy to have her stand beside me, not only as my friend, but as my sister from another mister!</p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large laurel"></div></div>
-				<div class="party-desc">
-					<h1>Laurel Temmel</h1>
-					<h2>Bridesmaid</h2>
-					<p>When Laurel met me she thought I was a goody-two-shoes that volunteered for everything and loved teacher’s college, while I was wondering if the girl with crazy curly hair was rolling her eyes at me or our orientation. Sitting in the grad lounge drinking some Blue Buck, we wondered if maybe we were more alike after all? Yes, yes we were. Many brunches, gin and tonics, americanos, hanging in the great outdoors, and debates about the merits of Dungeons & Dragons later, Laurel is still the one to roll her eyes at me when I’m being obnoxious.</p>
-				</div>
-			</div>
-		</div>
-		
-		
-	    <div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large pravin"></div></div>
-				<div class="party-desc">
-					<h1>Pravin Narsing</h1>
-					<h2>Best Man</h2>
-					<p>My brother was the best man before it was cool. He has always been my best man. He currently lives in Vancouver but his address has never really been set to one location. His travels have taken him all over the world. We’ve shared many adventures together, from Hyrule to Mushroom Kingdom and he will always be my Player 2.</p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large danny"></div></div>
-				<div class="party-desc">
-					<h1>Danny Garrett-Rempel</h1>
-					<h2>Groomsman</h2>
-					<p>A tale as old as time. Song as old as rhyme. Danny and I bonded in our first year of university singing the hit indie rock songs of our generation as we wandered aimlessly between dormitories. Songs that ranged anywhere from “Bright Side” by Thornley to “Mr Brightside” by The Killers (Danny you are going to love the band...). Oh there is nothing like the bright side but yesterday is just a pastime. Danny now resides in Calgary where he does Calgary things and continues to become more jacked than Jack Bauer and Hugh Jackman combined.</p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large dave"></div></div>
-				<div class="party-desc">
-					<h1>David Irons</h1>
-					<h2>Groomsman</h2>
-					<p>Dave Irons first met my Nintendo Mii facsimile at our place of work while I was on vacation. Despite not having been put on a project together for two years, Dave almost forced his friendship onto the real me, for which I hope I live up to his Mii expectations. Dave was the first person I told when I finally decided to buy a ring for Jess. His style is bar none and he’s just a cool dude.</p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large nate"></div></div>
-				<div class="party-desc">
-					<h1>Nathan Petrowitz</h1>
-					<h2>Groomsman</h2>
-					<p>I also met Nathan in my first year of university but more importantly Nathan unknowingly hosted my first date with Jess at his Canada Day party. Nathan has been my go to bro ever since we met. His wisdom is wise because he is one with the beard so deal with it. He and Danny are now happily married in Calgary with three children and a dog named Elijah… just kidding, but I am very jealous of their proximity to one another. I think about moving to Calgary every day… just kidding.</p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="party">
-				<div class="party-feat"><div class="party-image image-large michael"></div></div>
-				<div class="party-desc">
-					<h1>Michael Elliott</h1>
-					<h2>Groomsman</h2>
-					<p>Michael and I grew up together in Williams Lake. We spent many weekends hauling our Xbox’s and CRT TV’s over to each others houses so we could play Halo over LAN. Michael introduced me to the magical convention for all things gaming, PAX, where we have travelled to for many a pilgrimage. He currently combines his love for games, religion and writing into a variety of projects and is the wisest man I know.</p>
-				</div>
-			</div>
-		</div>
-    </div>
-    <div class="section" id="section5">
-    	<div class="intro">
-    		<h2>Accommodation</h2>
-    		<p>The wedding venue is located approximately an hour from Victoria. We highly recommend finding accommodation either in Duncan or Cowichan Bay for the night of the wedding. 
-			</p>
-    		<br/>
-    		<p>
-    		A shuttle bus will pick up guests from their accommodations and bring them to the venue, as well as back to their accommodations after the reception.
-    		</p><p>We will have more information on busses closer to the date of the wedding.
-    		</p>
-    		<br/>
-			<p>If you wish to drive to the venue there is parking at the farm but no overnight parking.
-			</p>
-    	</div>
-    	<div class="acc-types">
-    		<ul id="acc-menu">
-				<li id="acc-button-duncan" class="active"><a href="#">Duncan</a></li>
-				<li id="acc-button-cowichan"><a href="#">Cowichan Bay</a></li>
-				<li id="acc-button-airbnb"><a href="#">AirBnB</a></li>
-			</ul>
-    	</div>
-    	<div class="acc-details">
-    		<div id="acc-duncan" class="grid">
-    			<div class="acc-item grid-item">
-    				<h2> Thunderbird Motor Inn</h2>
-					<p>1-250-748-8192 </p>
-    				<a class="btn" href="http://www.thunderbirdmotorinn.ca" target="_blank">
-    				Book Now
-					</a>
-				</div>
-				<div class="acc-item grid-item">
-					<h2>Best Western Cowichan Valley Inn</h2>
-					<p>1-250-748-2722</p>
-    				<a class="btn" href="http://www.cowichanvalleyinn.com" target="_blank">
-    				Book Now
-					</a>
-				</div>
-				<div class="acc-item grid-item">
-					<h2>Super 8</h2>
-					<p>1-250-748-0661</p>
-    				<a class="btn" href="http://www.super8.com/hotels/british-columbia/duncan/super-8-duncan/hotel-overview" target="_blank">
-    				Book Now
-					</a>
-				</div>
-				<div class="acc-item grid-item">
-					<h2>Travelodge Silver Bridge</h2>
-					<p>1-888-858-2200</p>
-    				<a class="btn" href="http://www.travelodge.com/hotels/british-columbia/duncan/travelodge-silver-bridge-inn/hotel-overview" target="_blank">
-    				Book Now
-					</a>
-				</div>
-    		</div>
-    		<div id="acc-cowichan" class="grid">
-    			<div class="acc-item grid-item">
-    				<h2>Quamichan Inn</h2>
-					<p>1-250-746-7028</p>
-    				<a class="btn" href="http://www.quamichaninn.com/" target="_blank">
-    				Book Now
-					</a>
-				</div>
-    			<div class="acc-item grid-item">
-    				<h2>Wessex Inn</h2>
-					<p>1-250-748-4214</p>
-    				<a class="btn" href="http://www.wessexinn.com/index.php" target="_blank">
-    				Book Now
-					</a>
-				</div>
-				<div class="acc-item grid-item">
-					<h2>The Secret Garden B&B (closest to the veue)</h2>
-					<p>1-250-412-1603</p>
-    				<a class="btn" href="http://www.bbcanada.com/visecretgarden" target="_blank">
-    				Book Now
-					</a>
-				</div>
-				<div class="acc-item grid-item grid-item-3">
-					<h2>The Funky Frog B&B</h2>
-					<p>1-250-597-4662</p>
-    				<a class="btn" href="http://www.funkyfrogbb.com/" target="_blank">
-    				Book Now
-					</a>
-				</div>
-    		</div>
-    		<div id="acc-airbnb" class="grid">
-    			<div class="acc-item grid-item">
-	    			<h2> Check out AirBnB Listings for Duncan </h2>
-	    			<a class="btn" href="https://www.airbnb.ca/s/Duncan--BC" target="_blank">
-    				Book Now
-					</a>
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <div class="section" id="section6">
-    	<div class="intro">
-    		<h1>Gift Registry</h1>
-    		<p>Your presence is the greatest gift of all but if you were to purchase something for us please browse our Amazon wish list.</p>
-			<div style="margin-top: 50px;">
-    			<a class="btn" href="http://www.amazon.ca/registry/wishlist/2J4DXOA4F002V" target="_blank">Amazon Wish List</a>
-    		</div>
-    	</div>
+        <div class="intro">
+            <h1>Gift Registry</h1>
+            <p>All that jazz</p>
+        </div>
     </div>
 </div>
 
