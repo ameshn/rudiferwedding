@@ -11,7 +11,7 @@
 
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/rudifer.css" />
     <style>
 
     /* Style for our header texts
@@ -22,7 +22,7 @@
         color: #fff;
         margin:0;
     }
-    .intro p{
+    h2{
         color: #fff;
     }
 
@@ -52,15 +52,15 @@
     <script type="text/javascript" src="vendors/scrolloverflow.js"></script>
 
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="js/examples.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 menu: '#menu',
-                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F'],
-                autoScrolling: false
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
+                sectionsColor: ['#f4d372', '#83c9c1', '#edbab9', '#0a8aa5', '#d1bde0'],
+                autoScrolling: false,
+                verticalCentered: false
             });
         });
     </script>
@@ -72,35 +72,45 @@
 
 <ul id="menu">
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Rudi and Jen</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Location</a></li>
-    <li data-menuanchor="thirdPage"><a href="#thirdPage">Accommodation</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">The Wedding</a></li>
+    <li data-menuanchor="thirdPage"><a href="#thirdPage">While In Victoria</a></li>
     <li data-menuanchor="fourthPage"><a href="#fourthPage">Gift Registry</a></li>
+    <li data-menuanchor="fifthPage"><a href="#fifthPage">FAQ</a></li>
 </ul>
 
 <div id="fullpage">
     <div class="section " id="section0">
         <div class="intro">
             <h1>Rudi and Jen</h1>
-            <p>Saturday, June 24 2017, 3:30pm at Beacon Hill Park</p>
+            <div class="intro-content">
+            <h2>We're getting married!</h2>
+            <p>June 24, 2017<br>Victoria, BC<br>Ceremony: Beacon Hill Park<br>Reception: 1701 Douglas St. (Victoria Public Market at the Hudson)</p>
+            </div>
         </div>
     </div>
     <div class="section" id="section1">
         <div class="intro">
-            <h1>Maps</h1>
-            <p>All that jazz</p>
+            <h1>The Wedding</h1>
+            <p>Details Coming Soon</p>
         </div>
 
     </div>
     <div class="section" id="section2">
         <div class="intro">
-            <h1>Hotel Info</h1>
-            <p>and car rental</p>
+            <h1>While in Victoria</h1>
+            <p>Details Coming Soon</p>
         </div>
     </div>
     <div class="section" id="section3">
         <div class="intro">
             <h1>Gift Registry</h1>
-            <p>All that jazz</p>
+            <p>Details Coming Soon</p>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="intro">
+            <h1>FAQ</h1>
+            <p>Details Coming Soon</p>
         </div>
     </div>
 </div>
