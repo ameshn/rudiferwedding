@@ -1,119 +1,232 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license. 
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Rudi and Jen's Wedding</title>
-    <meta name="author" content="Amesh Narsing" />
-    <meta name="description" content="The wedding of Rudi and Jen. Saturday, June 24 2017" />
-    <meta name="keywords"  content="Rudi,Jen,wedding" />
-    <meta name="Resource-type" content="Document" />
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="css/rudifer.css" />
-    <style>
+    <title>Rudi + Jen</title>
 
-    /* Style for our header texts
-    * --------------------------------------- */
-    h1{
-        font-size: 5em;
-        font-family: arial,helvetica;
-        color: #fff;
-        margin:0;
-    }
-    h2{
-        color: #fff;
-    }
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    /* Centered texts in each section
-    * --------------------------------------- */
-    .section{
-        text-align:center;
-    }
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
 
-
-    /* Bottom menu
-    * --------------------------------------- */
-    #infoMenu li a {
-        color: #fff;
-    }
-    </style>
-
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-    <script type="text/javascript" src="vendors/scrolloverflow.js"></script>
-
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                menu: '#menu',
-                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage'],
-                sectionsColor: ['#f4d372', '#83c9c1', '#edbab9', '#0a8aa5', '#d1bde0'],
-                autoScrolling: false,
-                verticalCentered: false
-            });
-        });
-    </script>
-
+    <!-- Custom Fonts from Google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
 </head>
+
 <body>
 
+    <!-- Navigation -->
+    <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                	<span class="glyphicon glyphicon-fire"></span> 
+                	RUDI + JEN
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Wedding <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#">Ceremony</a></li>
+							<li><a href="#">Reception</a></li>
+						</ul>
+					</li>
 
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Stay <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="#">Accommodation</a></li>
+                            <li><a href="#">Car Rental</a></li>
+                        </ul>
+                    </li>
 
-<ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Rudi and Jen</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">The Wedding</a></li>
-    <li data-menuanchor="thirdPage"><a href="#thirdPage">While In Victoria</a></li>
-    <li data-menuanchor="fourthPage"><a href="#fourthPage">Gift Registry</a></li>
-    <li data-menuanchor="fifthPage"><a href="#fifthPage">FAQ</a></li>
-</ul>
+                    <li>
+                        <a href="#">Gift Registry</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
 
-<div id="fullpage">
-    <div class="section " id="section0">
-        <div class="intro">
-            <h1>Rudi and Jen</h1>
-            <div class="intro-content">
-            <h2>We're getting married!</h2>
-            <p>June 24, 2017<br>Victoria, BC<br>Ceremony: Beacon Hill Park<br>Reception: 1701 Douglas St. (Victoria Public Market at the Hudson)</p>
+	<!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Rudi + Jen</h1>
+                <p>We're getting married!</br>June 24, 2017 ~ Ceremony: Beacon Hill Park ~ Reception: Victoria Public Market at the Hudson</p>
             </div>
         </div>
-    </div>
-    <div class="section" id="section1">
-        <div class="intro">
-            <h1>The Wedding</h1>
-            <p>Details Coming Soon</p>
-        </div>
+    </header>
 
-    </div>
-    <div class="section" id="section2">
-        <div class="intro">
-            <h1>While in Victoria</h1>
-            <p>Details Coming Soon</p>
+	<!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                	<span class="glyphicon glyphicon-heart" style="font-size: 60px"></span>
+                    <h2 class="section-heading">The Wedding</h2>
+                    <p class="text-light">We’re so excited you’ll be with us to celebrate! </p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="section" id="section3">
-        <div class="intro">
-            <h1>Gift Registry</h1>
-            <p>Details Coming Soon</p>
+    </section>
+
+	<!-- Content 1 -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-responsive center-block" src="images/ceremony.png" alt="">
+                </div>
+                <div class="col-sm-6">
+                	<h2 class="section-header">The Ceremony</h2>
+                	<p class="lead text-muted">The ceremony will be held at 3:30pm in Beacon Hill Park, Victoria close to the intersection of Oliphant Ave. and Heywood Ave. Limited parking is available by the play ground and cricket field, so we encourage folks to walk or taxi if possible. Keep an eye out for decorations and signs in the park with directions to the ceremony. 
+                    </br>
+                    </br>
+                    We’re crossing our fingers for a lovely summer day, but also suggest keeping an umbrella handy as the ceremony will move forward with light rain.
+                    </br>
+                    </br>
+                    The ceremony will be short and sweet, and with limited seating, we ask that priority be given to family and folks who need it - Thanks!</p>
+                	<a href="https://www.google.ca/maps/place/Beacon+Hill+Park/@48.412686,-123.3653069,17z/data=!3m1!4b1!4m5!3m4!1s0548f74eadf908b6b:0xb41e4d0e159ad40e!8m2!3d48.4126825!4d-123.3631182"  class="btn btn-primary btn-lg">Ceremony Map</a>
+                </div>                
+                
+            </div>
         </div>
-    </div>
-    <div class="section" id="section4">
-        <div class="intro">
-            <h1>FAQ</h1>
-            <p>Details Coming Soon</p>
+    </section>
+
+	<!-- Content 2 -->
+     <section class="content content-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                	<h2 class="section-header">The Reception</h2>
+                	<p class="lead text-light">Dancing? Yes please! 
+                    </br>
+                    </br>
+                    The reception will begin at 7:00pm at 1701 Douglas St. (Victoria Public  Market at the Hudson). This will be a stand-up cocktail event with seating available. Gourmet street food is on the menu with plenty allergy friendly, vegetarian, and gluten-free options. Let us know of any additional dietary choices/restrictions by email at rudiferwedding@gmail.com. 
+                    </br>
+                    </br>
+                    There will also be a toonie bar serving up Hoyne craft beer, wine, and cider. Please remember to send us your two songs for dancing if you haven’t already!
+                    google maps link</p>
+                	<a href="https://www.google.ca/maps/place/Victoria+Public+Market+at+the+Hudson/@48.4300514,-123.3659127,17z/data=!3m1!4b1!4m5!3m4!1s0x548f74846e155e21:0x5e6ccc8e7b42abd3!8m2!3d48.4300479!4d-123.363724 " class="btn btn-default btn-lg">Reception Map</a>
+                </div>    
+                <div class="col-sm-6">
+                    <img class="img-responsive img-circle center-block" src="images/smiles.jpg" alt="">
+                </br>
+                    <img class="img-responsive center-block" src="images/reception.png" alt="">
+                </div>            
+                
+            </div>
         </div>
-    </div>
-</div>
+    </section>    
+
+    <!-- Content 3 -->
+     <section class="content content-3">
+        <div class="container">
+            <h2 class="section-header"><span class="glyphicon glyphicon-bed text-primary"></span><br>Accommodation</h2>
+            <p class="lead text-muted">Block room accommodation is available for wedding guests at the following hotels in downtown Victoria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promos -->
+	<div class="container-fluid">
+        <div class="row promo">
+        	<a href="#">
+				<div class="col-md-4 promo-item item-1">
+					<h3>
+						TODO
+					</h3>
+				</div>
+            </a>
+            <a href="#">
+				<div class="col-md-4 promo-item item-2">
+					<h3>
+						TODO
+					</h3>
+				</div>
+            </a>
+			
+			<a href="#">
+				<div class="col-md-4 promo-item item-3">
+					<h3>
+						TODO
+					</h3>
+				</div>
+            </a>
+        </div>
+    </div><!-- /.container-fluid -->
+
+
+    
+	<!-- Footer -->
+    <footer class="page-footer">
+    
+    	<!-- Contact Us -->
+        <div class="contact">
+        	<div class="container">
+				<h2 class="section-heading">Contact Us</h2>
+				<p><span class="glyphicon glyphicon-envelope"></span><br> rudiferwedding@gmail.com</p>
+        	</div>
+        </div>
+        	
+        <!-- Copyright etc -->
+        <div class="small-print">
+        	<div class="container">
+        		<p>June 24, 2017</p>
+        	</div>
+        </div>
+        
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    
+    <!-- Custom Javascript -->
+    <script src="js/custom.js"></script>
 
 </body>
+
 </html>
