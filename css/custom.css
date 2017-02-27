@@ -157,6 +157,14 @@ header .header-content .header-content-inner p {
     background-color: #d1bde0;
 }
 
+.content-5 .text-light {
+    color: #fff;
+}
+
+.content-5 .row {
+    padding: 5px 5% 15px;
+}
+
 .content-5 h2 {
     text-align: center;
 }
@@ -223,6 +231,11 @@ header .header-content .header-content-inner p {
 	font-size: 22px;
 	font-weight: 300;
 	}
+
+.page-footer .contact img {
+	width: 50%;
+    padding-bottom: 20px;
+	}
 	
 .content-3 .glyphicon,	
 .page-footer .contact .glyphicon {
@@ -280,7 +293,7 @@ header .header-content .header-content-inner p {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
-        background-color: transparent;
+        background-color: rgba(10, 138, 165, 0.29);
     }
 
     .navbar-default .navbar-header .navbar-brand {
